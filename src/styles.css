@@ -34,8 +34,8 @@ body {
 
 #menu {
   display: inline-block;
-  width: 300px;
-  min-width: 300px;
+  width: 270px;
+  min-width: 270px;
 
   background-color: #3B0939;
 
@@ -50,6 +50,7 @@ body {
 
   font-size: 5vh;
   font-weight: bold;
+  text-shadow: 5px 5px 5px black;
 }
 
 #menu_buttons {
@@ -62,21 +63,44 @@ body {
   height: 100%;
 }
 
-.tablinks {
+.tab_button {
   min-height: 45px;
   text-align: center;
   margin: 20px 20px;
 
+  min-width: 120px;
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+ 
+  align-items: center;
+
   background-color: #654582;
+  box-shadow: 1px 1px 1px black;
   border: none;
+  
+  border-radius: 20px;
 
   font-family: KyivTypeTitling;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: bold;
   color: #ffffff;
 }
 
+.tab_button img {
 
+  max-width: 30px;
+  max-height: 30px;
+  text-align: center;
+
+  padding-right: 10px;
+  margin-left: 40px;
+}
+
+.tabcontent {
+  display: none;
+}
 
 #main_frame {
   background-color: #31243D;

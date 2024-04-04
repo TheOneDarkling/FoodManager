@@ -17,9 +17,17 @@
       </div>
       
       <div id="menu_buttons">
-        <button class="tablinks" onclick="openCity(event, 'recipes')">Recipes</button>
-        <button class="tablinks" onclick="openCity(event, 'calendar')">Calendar</button>
-        <button class="tablinks" onclick="openCity(event, 'shopping')">Shopping</button>
+        <button class="tab_button" onclick="openTab(event, 'recipes')" id="defaultOpen">
+          <img src="/assets/icons/icon_recipes.png" />
+          <p>Recipes</p>
+        </button>
+
+        <button class="tab_button" onclick="openTab(event, 'calendar')">
+          <img src="assets/icons/icon_calendar.png" />Calendar
+        </button>
+        <button class="tab_button" onclick="openTab(event, 'shopping')">
+          <img src="assets/icons/icon_shopping.png" />Shopping
+        </button>
       </div>
     </div>
 
@@ -38,19 +46,22 @@
     </div>
 
     <script>
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
+      function openTab(evt, tab) {
+        var i, tabcontent, tab_button;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        tab_button = document.getElementsByClassName("tab_button");
+        for (i = 0; i < tab_button.length; i++) {
+          tab_button[i].className = tab_button[i].className.replace(" active", "");
         }
-        document.getElementById(cityName).style.display = "block";
+        document.getElementById(tab).style.display = "block";
         evt.currentTarget.className += " active";
       }
-      </script>
+
+       document.getElementById("defaultOpen").click();
+    </script>
+
   </body>
 </html>
