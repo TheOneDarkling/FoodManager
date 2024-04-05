@@ -6,41 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tauri App</title>
     <script type="module" src="/main.js" defer></script>
-    <style>
-      .logo.vanilla:hover {
-        filter: drop-shadow(0 0 2em #ffe21c);
-      }
-    </style>
   </head>
 
   <body>
-    <div class="container">
-      <h1>Welcome to Tauri!</h1>
-
-      <div class="row">
-        <a href="https://tauri.app" target="_blank">
-          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-        >
-          <img
-            src="/assets/javascript.svg"
-            class="logo vanilla"
-            alt="JavaScript logo"
-          />
-        </a>
+    <div id="menu"> 
+      
+      <div id="top_left_title">
+        <p class="food_manager_title1">Food</p>
+        <p class="food_manager_title2"> Manager</p>
       </div>
+      
+      <div id="menu_buttons">
+        <button class="tab_button" onclick="openTab(event, 'recipes')" id="defaultOpen">
+          <img src="assets/icons/icon_recipes.png" />
+          <p>Recipes</p>
+        </button>
 
-      <p>Click on the Tauri logo to learn more about the framework</p>
-
-      <form class="row" id="greet-form">
-        <input id="greet-input" placeholder="Enter a name..." />
-        <button type="submit">Greet</button>
-      </form>
-
-      <p id="greet-msg"></p>
+        <button class="tab_button" onclick="openTab(event, 'calendar')">
+          <img src="assets/icons/icon_calendar.png" />Calendar
+        </button>
+        <button class="tab_button" onclick="openTab(event, 'shopping')">
+          <img src="assets/icons/icon_shopping.png" />Shopping
+        </button>
+      </div>
     </div>
+
+    <div id="main_frame">
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+
+    <script>
+      function openTab(evt, tab) {
+        $.get("tabs/"  + tab + ".html", function (data) {
+            alert(data);  
+            $("#main_frame").html(data);
+          });   
+      }
+
+       document.getElementById("defaultOpen").click();
+    </script>
+
   </body>
 </html>
