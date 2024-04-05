@@ -112,12 +112,12 @@ body {
 @font-face {
   font-display: block;
   font-family: "KyivTypeTitling";
-  src: url("/assets/fonts/KyivTypeTitling-Regular.ttf");
+  src: url("assets/fonts/KyivTypeTitling-Regular.ttf");
 }
 
 @font-face {
   font-display: block;
   font-family: "KyivTypeTitling";
   font-weight: bold;
-  src: url("/assets/fonts/KyivTypeTitling-Bold.ttf");
+  src: url("assets/fonts/KyivTypeTitling-Bold.ttf");
 }
