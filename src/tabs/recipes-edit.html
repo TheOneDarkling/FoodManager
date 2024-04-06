@@ -8,22 +8,33 @@
             <div class="recipes-edit-category">
                 <div class="recipes-edit-text-input"> 
                     <label for="recipes-edit-title">Title</label>
-                    <input type="text" id="recipes-edit-title" name="title" placeholder="Enter recipe title ...">
+                    <input type="text" id="recipes-edit-title" name="title" autocomplete="off">
                 </div>
 
                 <div class="recipes-edit-text-input-small"> 
                     <label for="recipes-edit-preparation-time">Preparation Time</label>
-                    <input type="number" id="recipes-edit-preparation-time" name="preparation-time" placeholder="Minutes" value="0">
+                    <input type="number" id="recipes-edit-preparation-time" name="preparation-time" placeholder="Minutes" value="0" autocomplete="off">
                 </div>
 
                 <div class="recipes-edit-text-input-small"> 
                     <label for="recipes-edit-break-time">Break Time</label>
-                    <input type="number" id="recipes-edit-break-time" name="break-time" placeholder="Minutes" value="0">
+                    <input type="number" id="recipes-edit-break-time" name="break-time" placeholder="Minutes" value="0" autocomplete="off">
                 </div>
 
                 <div class="recipes-edit-text-input-small"> 
                     <label for="recipes-edit-cooking-time">Cooking Time</label>
-                    <input type="number" id="recipes-edit-cooking-time" name="cooking-time" placeholder="Minutes" value="0">
+                    <input type="number" id="recipes-edit-cooking-time" name="cooking-time" placeholder="Minutes" value="0" autocomplete="off">
+                </div>
+
+                <div class="recipes-edit-text-input-list">
+                    <label for="recipes-edit-difficulty">Difficulty</label>
+                    <input list="difficulty" name="difficulty" id="recipes-edit-difficulty" autocomplete="off" onfocus="this.value=''" onchange="this.blur();">
+                    <datalist id="difficulty">
+                      <option value="Easy">
+                      <option value="Normal">
+                      <option value="Difficult">
+                      <option value="Never Succeeded...">
+                    </datalist>
                 </div>
             </div>
 
