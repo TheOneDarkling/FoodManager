@@ -1,9 +1,16 @@
 
+<script src="../script/rating.js"></script>
+
 <div class="tab">
     <h1 id="tab-title">Edit Recipe</h1>
 
     <div id="recipes-main-border">
         <form>
+            <!--
+                
+                Recipe information
+
+            -->
             <h2>Recipe Information</h2>
             <div class="recipes-edit-category">
                 <div class="recipes-edit-text-input"> 
@@ -11,17 +18,17 @@
                     <input type="text" id="recipes-edit-title" name="title" autocomplete="off">
                 </div>
 
-                <div class="recipes-edit-text-input-small"> 
+                <div class="recipes-edit-number-input"> 
                     <label for="recipes-edit-preparation-time">Preparation Time</label>
                     <input type="number" id="recipes-edit-preparation-time" name="preparation-time" placeholder="Minutes" value="0" autocomplete="off">
                 </div>
 
-                <div class="recipes-edit-text-input-small"> 
+                <div class="recipes-edit-number-input"> 
                     <label for="recipes-edit-break-time">Break Time</label>
                     <input type="number" id="recipes-edit-break-time" name="break-time" placeholder="Minutes" value="0" autocomplete="off">
                 </div>
 
-                <div class="recipes-edit-text-input-small"> 
+                <div class="recipes-edit-number-input"> 
                     <label for="recipes-edit-cooking-time">Cooking Time</label>
                     <input type="number" id="recipes-edit-cooking-time" name="cooking-time" placeholder="Minutes" value="0" autocomplete="off">
                 </div>
@@ -33,13 +40,55 @@
                       <option value="Easy">
                       <option value="Normal">
                       <option value="Difficult">
-                      <option value="Never Succeeded...">
+                      <option value="Give Up">
                     </datalist>
                 </div>
             </div>
 
+            <!--
+                
+                Ingredients
+
+            -->
+
             <h2>Ingredients</h2>
+            <div class="recipes-edit-category">
+                <div class="recipes-edit-number-input"> 
+                    <label for="recipes-edit-person-count">Number of persons</label>
+                    <input type="number" id="recipes-edit-person-count" name="person-count" placeholder="Person" value="0" autocomplete="off">
+                </div>
+            </div>
+
+
+            <!--
+                
+                Preparation
+
+            -->
             <h2>Preparation</h2>
+
+
+            <!--
+                
+                Finish the recipe
+
+            -->
+            <h2>Finish the recipe</h2>
+            <div class="recipes-edit-category">
+
+                <div class="recipes-edit-textarea-input"> 
+                    <label for="recipes-edit-desciption">Description</label>
+                    <textarea id="recipes-edit-desciption" name="desciption" rows="3" cols="33"></textarea>
+                </div>
+
+                <div class="recipes-edit-rating">
+                    <span rating="5">♥</span>
+                    <span rating="4">♥</span>
+                    <span rating="3">♥</span>
+                    <span rating="2">♥</span>
+                    <span rating="1">♥</span>
+                 </div>
+            </div>
         </form>
     </div>
 </div>
