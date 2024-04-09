@@ -145,6 +145,61 @@
 }
 
 /*
+    PREPARATION
+*/
+
+.recipes-edit-preparation {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.recipes-edit-preparation textarea {
+    width: 70%;
+    margin: 0px 15px;
+
+    background-color: #e8d7ed;
+
+    -webkit-transition: 0.05s;
+    transition: 0.05s;
+    outline: none;
+}
+
+.recipes-edit-preparation textarea:focus {
+    border: 1px solid #8c0083;
+}
+
+.recipes-edit-preparation p {
+
+    width: 2%;
+
+    background-color: #8c0083;
+
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#button-add-preparation {
+    width: 200px;
+    margin: 4px 0px;
+
+    background-color: #e8d7ed;
+    border: 1px solid #131313;
+    
+    text-align: center;
+    font-size: 25px;
+    
+    cursor: pointer;
+}
+
+/*
     RATING
 */
 
