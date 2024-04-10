@@ -145,6 +145,68 @@
 }
 
 /*
+    INGREDIENTS
+*/
+
+.recipes-edit-ingredients {
+    display: flex;
+    flex-direction: row;
+
+    width: 70%;
+    height: 30px;
+    padding: 0;
+    padding: 2px 0px;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(90, 11, 73);
+    box-shadow: 0px 0px 3px black;
+}
+
+.recipes-edit-ingredients p {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    
+    color: white;
+}
+
+
+
+
+.recipes-edit-ingredients input {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px;
+
+    text-align: center;
+    font-size: 1.2em;
+    font-family: KyivTypeTitling;
+
+    background-color: #e7d5ed;
+    border: solid 1px black;
+
+    -webkit-transition: 0.05s;
+    transition: 0.05s;
+    outline: 0;
+}
+
+.recipes-edit-ingredients .ingredient-pair {
+    background-color: #e6c4f2;
+}
+
+
+.recipes-edit-ingredients input:focus {
+    /*border: 3px dashed #8c0083;*/
+    background-color: #aab9fb;
+}
+
+
+
+/*
     PREPARATION
 */
 
