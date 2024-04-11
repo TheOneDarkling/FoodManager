@@ -205,6 +205,20 @@
 }
 
 
+#button-add-ingredient {
+    width: 80px;
+    margin: 20px 0px;
+
+    background-color: #e8d7ed;
+    border: 1px solid #131313;
+    
+    text-align: center;
+    font-size: 25px;
+    
+    cursor: pointer;
+}
+
+
 
 /*
     PREPARATION
@@ -248,17 +262,29 @@
     font-weight: bold;
 }
 
-#button-add-preparation {
-    width: 200px;
-    margin: 4px 0px;
+/*
+    BUTTON ADD
+*/
+
+
+#button-add-ingredient, #button-add-preparation {
+    width: 80px;
+    margin: 15px 0px;
 
     background-color: #e8d7ed;
     border: 1px solid #131313;
+    box-shadow: 2px 2px 3px black;
     
     text-align: center;
     font-size: 25px;
     
     cursor: pointer;
+}
+
+#button-add-ingredient:hover, #button-add-preparation:hover {
+    background-color: #e9c7f4;
+    border: 1px solid #350129;
+    box-shadow: 1px 1px 1px black;
 }
 
 /*
